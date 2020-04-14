@@ -8,6 +8,9 @@ recommend a TensorFlow stack for a specific hardware. The application is
 showing one of the `Integration of Thoth
 <https://pypi.org/project/thamos>`_ using Thamos CLI.
 
+For OpenShift s2i (Source-To-Image) examples, visit `thoth-station/s2i-example
+<https://github.com/thoth-station/s2i-example>`__ repository.
+
 Thamos CLI
 ==========
 
