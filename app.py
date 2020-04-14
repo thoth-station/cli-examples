@@ -1,23 +1,26 @@
 #!/usr/bin/env python3
-# project template
-# Copyright(C) 2010 Red Hat, Inc.
-#
-# This program is free software: you can redistribute it and / or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
+"""A simple application to demo Thoth's software stack recommendations."""
 
-"""This is the main script of the template project."""
+import sys
+import tensorflow as tf
 
-from template.version import __version__
 
-if __name__ == "__main__":
-    print(f"A template project with Thoth integration, v{__version__}.")
+def thoth_hello_v1():
+    """Print hello world from within a TensorFlow session."""
+    hello = tf.constant('Hello Thoth by TensorFlow!')
+    sess = tf.Session()
+    print(run(hello))
+
+def thoth_hello_v2():
+    """Print hello world from within a TensorFlow session."""
+    hello = tf.constant('Hello Thoth by TensorFlow!')
+    tf.print(hello)
+
+
+if __name__ == '__main__':
+    tf_version = tf.__version__
+    if int(tf_version[0]) >= 2:
+        sys.exit(thoth_hello_v2())
+    else:
+        sys.exit(thoth_hello_v1())
+    
