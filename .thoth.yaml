@@ -8,7 +8,7 @@ runtime_environments:
       name: ubi
       version: "8"
     python_version: "3.6"
-    recommendation_type: stable
+    recommendation_type: security
 
 managers:
   - name: update
