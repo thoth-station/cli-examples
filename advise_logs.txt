@@ -1,0 +1,108 @@
+2020-11-05 20:10:06,042 thoth.adviser               INFO: Version: 0.20.0
+2020-11-05 20:10:06,046 thoth.adviser               INFO: Starting resolver using 'TemporalDifference' predictor with random seed set to 42, predictor parameters: {'step': 1, 'temperature_coefficient': 0.999, 'trace': False}
+2020-11-05 20:10:06,544 thoth.adviser.pipeline_builder INFO: Creating pipeline configuration
+2020-11-05 20:10:06,858 thoth.adviser.run           WARNING: Development dependencies will not be taken into account - see https://thoth-station.ninja/j/no_dev
+2020-11-05 20:10:06,866 thoth.adviser.boots.ubi     INFO: Using observations for RHEL instead of UBI, RHEL is ABI compatible with UBI - see https://thoth-station.ninja/j/rhel_ubi
+2020-11-05 20:10:06,868 thoth.adviser.boots.platform WARNING: No platform provided in the configuration, setting to 'linux-x86_64' implicitly - see https://thoth-station.ninja/j/platform
+2020-11-05 20:10:06,892 thoth.adviser.resolver      INFO: Scoring user's stack - see https://thoth-station.ninja/j/user_stack
+2020-11-05 20:10:07,146 thoth.adviser.resolver      INFO: Scoring user's stack based on the lock file submitted - see https://thoth-station.ninja/j/user_stack
+2020-11-05 20:10:08,242 thoth.adviser.resolver      INFO: User's software stack has a score of 3 - see https://thoth-station.ninja/j/user_stack
+2020-11-05 20:10:08,242 thoth.adviser.resolver      INFO: Preparing initial states for the resolution pipeline
+2020-11-05 20:10:08,243 thoth.adviser.resolver      INFO: Resolving direct dependencies
+2020-11-05 20:10:08,265 thoth.adviser.resolver      INFO: Found direct dependency 'flask' with version specification '<=0.12.3'
+2020-11-05 20:10:08,361 thoth.adviser.sieves.solved WARNING: Removing package ('flask', '0.9', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:08,374 thoth.adviser.sieves.solved WARNING: Removing package ('flask', '0.8.1', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:08,385 thoth.adviser.sieves.solved WARNING: Removing package ('flask', '0.8', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:08,398 thoth.adviser.sieves.solved WARNING: Removing package ('flask', '0.7.2', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:08,412 thoth.adviser.sieves.solved WARNING: Removing package ('flask', '0.7.1', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:08,424 thoth.adviser.sieves.solved WARNING: Removing package ('flask', '0.7', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:08,568 thoth.adviser.resolver      INFO: Hold tight, Thoth is computing recommendations for your application...
+2020-11-05 20:10:10,307 thoth.adviser.sieves.solved WARNING: Removing package ('jinja2', '2.5.4', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:10,319 thoth.adviser.sieves.solved WARNING: Removing package ('jinja2', '2.5.3', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:10,330 thoth.adviser.sieves.solved WARNING: Removing package ('jinja2', '2.5', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:10,344 thoth.adviser.sieves.solved WARNING: Removing package ('jinja2', '2.4.1', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:10,360 thoth.adviser.sieves.solved WARNING: Removing package ('jinja2', '2.0', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:10,592 thoth.adviser.sieves.solved WARNING: Removing package ('werkzeug', '0.10.3', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:10,736 thoth.adviser.sieves.solved WARNING: Removing package ('werkzeug', '0.1', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:11,641 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.10.1 on https://pypi.org/simple
+2020-11-05 20:10:11,692 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===1.0.0 on https://pypi.org/simple
+2020-11-05 20:10:11,905 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '1.0', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:12,096 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.10.1 on https://pypi.org/simple
+2020-11-05 20:10:12,280 thoth.adviser.steps.security_indicators WARNING: No security info for click===7.1 on https://pypi.org/simple
+2020-11-05 20:10:12,432 thoth.adviser.steps.cve     WARNING: Skipping including package ('werkzeug', '0.15.0', 'https://pypi.org/simple') as a CVE pyup.io-37276 was found: :class:`~exceptions.BadRequestKeyError` in werkzeug 0.15.5 adds the ``KeyError`` message to the description if ``e.show_exception`` is set to ``True``. This is a more secure default than the original 0.15.0 behavior and makes it easier to control without losing information.
+2020-11-05 20:10:12,481 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.10 on https://pypi.org/simple
+2020-11-05 20:10:12,536 thoth.adviser.steps.security_indicators WARNING: No security info for click===7.0 on https://pypi.org/simple
+2020-11-05 20:10:12,586 thoth.adviser.steps.security_indicators WARNING: No security info for markupsafe===0.23 on https://pypi.org/simple
+2020-11-05 20:10:12,641 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11.8 on https://pypi.org/simple
+2020-11-05 20:10:12,689 thoth.adviser.steps.security_indicators WARNING: No security info for click===6.1 on https://pypi.org/simple
+2020-11-05 20:10:12,750 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.14.1 on https://pypi.org/simple
+2020-11-05 20:10:12,934 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.9.6 on https://pypi.org/simple
+2020-11-05 20:10:12,994 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11.5 on https://pypi.org/simple
+2020-11-05 20:10:13,052 thoth.adviser.steps.security_indicators WARNING: No security info for click===6.0 on https://pypi.org/simple
+2020-11-05 20:10:13,053 thoth.adviser.resolver      INFO: Pipeline reached 1 final states out of 100000 requested in iteration 78 (pipeline pace 0.16 stacks/second); top rated software stack in beam has a score of 2.50; top rated software stack found so far has a score of 3.00
+2020-11-05 20:10:13,454 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.9.5 on https://pypi.org/simple
+2020-11-05 20:10:13,499 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11.14 on https://pypi.org/simple
+2020-11-05 20:10:13,542 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.9.3 on https://pypi.org/simple
+2020-11-05 20:10:14,197 thoth.adviser.steps.security_indicators WARNING: No security info for click===6.4 on https://pypi.org/simple
+2020-11-05 20:10:14,350 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.13 on https://pypi.org/simple
+2020-11-05 20:10:14,414 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.12.2 on https://pypi.org/simple
+2020-11-05 20:10:14,640 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.9.4 on https://pypi.org/simple
+2020-11-05 20:10:14,710 thoth.adviser.steps.security_indicators WARNING: No security info for click===3.2 on https://pypi.org/simple
+2020-11-05 20:10:14,770 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11.12 on https://pypi.org/simple
+2020-11-05 20:10:15,106 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.18', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,117 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.17', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,136 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.16', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,149 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.15', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,161 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.14', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,172 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.13', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,185 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.12', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,196 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.11', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,207 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.9.3', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,218 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.9.2', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,230 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.9.1', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,240 thoth.adviser.sieves.solved WARNING: Removing package ('markupsafe', '0.9', 'https://pypi.org/simple') due to build time error in the software environment - see https://thoth-station.ninja/j/buildtime_error
+2020-11-05 20:10:15,273 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.8.1 on https://pypi.org/simple
+2020-11-05 20:10:15,335 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.12.1 on https://pypi.org/simple
+2020-11-05 20:10:15,404 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.12 on https://pypi.org/simple
+2020-11-05 20:10:15,474 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11.9 on https://pypi.org/simple
+2020-11-05 20:10:15,553 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11.15 on https://pypi.org/simple
+2020-11-05 20:10:15,623 thoth.adviser.steps.security_indicators WARNING: No security info for click===3.0 on https://pypi.org/simple
+2020-11-05 20:10:15,834 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.8 on https://pypi.org/simple
+2020-11-05 20:10:15,887 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.7.3 on https://pypi.org/simple
+2020-11-05 20:10:16,226 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.8 on https://pypi.org/simple
+2020-11-05 20:10:16,298 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11 on https://pypi.org/simple
+2020-11-05 20:10:16,374 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.9.2 on https://pypi.org/simple
+2020-11-05 20:10:16,460 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.8.1 on https://pypi.org/simple
+2020-11-05 20:10:16,521 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11.10 on https://pypi.org/simple
+2020-11-05 20:10:16,602 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.7.1 on https://pypi.org/simple
+2020-11-05 20:10:16,932 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11.7 on https://pypi.org/simple
+2020-11-05 20:10:16,996 thoth.adviser.steps.security_indicators WARNING: No security info for click===2.6 on https://pypi.org/simple
+2020-11-05 20:10:17,073 thoth.adviser.steps.security_indicators WARNING: No security info for click===2.5 on https://pypi.org/simple
+2020-11-05 20:10:17,132 thoth.adviser.steps.security_indicators WARNING: No security info for jinja2===2.7 on https://pypi.org/simple
+2020-11-05 20:10:17,356 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.11.3 on https://pypi.org/simple
+2020-11-05 20:10:17,679 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.8.2 on https://pypi.org/simple
+2020-11-05 20:10:17,775 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.10.1 on https://pypi.org/simple
+2020-11-05 20:10:17,851 thoth.adviser.steps.security_indicators WARNING: No security info for click===2.0 on https://pypi.org/simple
+2020-11-05 20:10:18,006 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.10 on https://pypi.org/simple
+2020-11-05 20:10:18,137 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.9.4 on https://pypi.org/simple
+2020-11-05 20:10:18,380 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.7.2 on https://pypi.org/simple
+2020-11-05 20:10:18,478 thoth.adviser.steps.security_indicators WARNING: No security info for werkzeug===0.8.3 on https://pypi.org/simple
+2020-11-05 20:10:18,953 thoth.adviser.resolver      INFO: Pipeline reached 551 final states out of 100000 requested in iteration 7580 (pipeline pace 45.59 stacks/second); top rated software stack in beam has a score of 2.50; top rated software stack found so far has a score of 3.00
+2020-11-05 20:10:19,483 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.10 on https://pypi.org/simple
+2020-11-05 20:10:19,592 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.6.1 on https://pypi.org/simple
+2020-11-05 20:10:19,646 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.2 on https://pypi.org/simple
+2020-11-05 20:10:19,693 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.6 on https://pypi.org/simple
+2020-11-05 20:10:19,741 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.5.2 on https://pypi.org/simple
+2020-11-05 20:10:19,792 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.5.1 on https://pypi.org/simple
+2020-11-05 20:10:19,854 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.5 on https://pypi.org/simple
+2020-11-05 20:10:19,900 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.4 on https://pypi.org/simple
+2020-11-05 20:10:19,945 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.3.1 on https://pypi.org/simple
+2020-11-05 20:10:19,969 thoth.adviser.steps.cve     WARNING: Skipping including package ('flask', '0.1', 'https://pypi.org/simple') as a CVE CVE-2018-1000656 was found: flask version Before 0.12.3 contains a CWE-20: Improper Input Validation vulnerability in flask that can result in Large amount of memory usage possibly leading to denial of service. This attack appear to be exploitable via Attacker provides JSON data in incorrect encoding. This vulnerability appears to have been fixed in 0.12.3.
+2020-11-05 20:10:19,970 thoth.adviser.steps.cve     WARNING: Skipping including package ('flask', '0.1', 'https://pypi.org/simple') as a CVE pyup.io-25820 was found: flask 0.6.1 fixes a security problem that allowed clients to download arbitrary files  if the host server was a windows based operating system and the client  uses backslashes to escape the directory the files where exposed from.
+2020-11-05 20:10:19,970 thoth.adviser.steps.cve     WARNING: Skipping including package ('flask', '0.1', 'https://pypi.org/simple') as a CVE CVE-2019-1010083 was found: The Pallets Project Flask before 1.0 is affected by: unexpected memory usage. The impact is: denial of service. The attack vector is: crafted encoded JSON data. The fixed version is: 1. See: CVE-2019-1010083. (NOTE: this may overlap CVE-2018-1000656.)
+2020-11-05 20:10:20,025 thoth.adviser.steps.security_indicators WARNING: No security info for flask===0.3 on https://pypi.org/simple
+2020-11-05 20:10:20,025 thoth.adviser.resolver      WARNING: No more possible paths found for resolution, terminating resolver in iteration 13682, see - https://thoth-station.ninja/j/no_paths
+2020-11-05 20:10:20,025 thoth.adviser.resolver      INFO: Resolver took 13.1596 seconds in total, pipeline speed 51.0655 stacks/second
+2020-11-05 20:10:20,026 thoth.adviser.resolver      INFO: The highest rated software stack resolved has a score of 3.00
+2020-11-05 20:10:20,028 thoth.adviser.resolver      INFO: Pipeline strides discarded 0 and accepted 672 final states in total
+
