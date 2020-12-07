@@ -6,7 +6,9 @@ Thoth's TensorFlow stack guidance example
 This is an example of an application which uses Thoth's recommendations to
 recommend a TensorFlow stack for a specific hardware. The application is
 showing one of the `Integration of Thoth
-<https://pypi.org/project/thamos>`_ using Thamos CLI.
+<https://pypi.org/project/thamos>`_ using Thamos CLI.  
+
+For a video of the demo go `here <https://www.youtube.com/watch?v=mes9sDMPr28>`_.
 
 For OpenShift s2i (Source-To-Image) examples, visit `thoth-station/s2i-example
 <https://github.com/thoth-station/s2i-example>`__ repository.
