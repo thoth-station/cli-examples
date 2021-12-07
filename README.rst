@@ -87,14 +87,16 @@ Manage vulnerablities in your dependencies with an example application
 The ``game_of_life.py`` program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project.
 To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using ``.thoth.yaml``.
 
-To introduce voluntarily a known vulnerability in the project, specify that you would like to add `flask` version 0.9 in your requirements:
+To introduce voluntarily a known vulnerability in the project, specify that you would like to add ``flask`` version 0.9 in your requirements:
 
 ..code-block:: console
 
   thamos add flask==0.9
 
-This version of `flask` is known for introducing a vulnerability further described on the `National Vulnerability Database website 
-<https://nvd.nist.gov/vuln/detail/CVE-2019-1010083>`_. 
+This version of ``flask`` is known for introducing a vulnerability further described on the `National Vulnerability Database website 
+<https://nvd.nist.gov/vuln/detail/CVE-2019-1010083>`_.
+Thamos can also manage user requirements for dependencies using `constraints files
+<https://pip.pypa.io/en/stable/user_guide/#constraints-files>`_. To add ``flask`` version 0.9 in your dependency requirements this way, you can simply write the package with its version into this file.
 
 To get a stack guidance based on security, run the following command:
 
