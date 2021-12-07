@@ -80,3 +80,44 @@ To browse Thoth's logs during or after the adviser run:
 .. code-block:: console
 
   thamos log
+
+Manage vulnerablities in your dependencies with an example application 
+----------------------------------------------------------------------
+
+The ``game_of_life.py`` program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project.
+To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using ``.thoth.yaml``.
+
+To introduce voluntarily a known vulnerability in the project, specify that you would like to add `flask` version 0.9 in your requirements:
+
+..code-block:: console
+
+  thamos add flask==0.9
+
+This version of `flask` is known for introducing a vulnerability further described on the `National Vulnerability Database website 
+<https://nvd.nist.gov/vuln/detail/CVE-2019-1010083>`_. 
+
+To get a stack guidance based on security, run the following command:
+
+..code-block:: console
+
+  thamos advise --recommendation-type security
+
+or modify the ``recommendation_type`` field to ``security`` in ``.thoth.yaml`` to set it as your default recommendation type, and simply run:
+
+..code-block:: console
+
+  thamos advise
+
+Thamos report should show that ``flask`` version 0.9 was automatically removed from your application software stack as a CVE was found in the package.
+
+Run the example application
+===========================
+
+To run the example application with the resolved dependencies, run:
+
+..code-block:: console
+
+  python3 game_of_life.py
+
+to launch a new game with the default parameters or choose your own parameters as specified in the ``help`` section.
+Click on the coordinates to select your first generation of individuals and press ``Enter`` to see the next generation.
