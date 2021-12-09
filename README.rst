@@ -87,37 +87,38 @@ Manage vulnerablities in your dependencies with an example application
 The ``game_of_life.py`` program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project.
 To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using ``.thoth.yaml``.
 
-To introduce voluntarily a known vulnerability in the project, specify that you would like to add ``flask`` version 0.9 in your requirements:
+To introduce voluntarily a known vulnerability in the project, specify that you would like to add ``numpy`` version 1.13.1 in your requirements:
 
-..code-block:: console
+.. code-block:: console
 
-  thamos add flask==0.9
+  thamos add numpy==1.13.1
 
-This version of ``flask`` is known for introducing a vulnerability further described on the `National Vulnerability Database website 
-<https://nvd.nist.gov/vuln/detail/CVE-2019-1010083>`_.
+This version of ``numpy`` is known for introducing a vulnerability further described on the `National Vulnerability Database website 
+<https://nvd.nist.gov/vuln/detail/CVE-2017-12852>`_.
 Thamos can also manage user requirements for dependencies using `constraints files
-<https://pip.pypa.io/en/stable/user_guide/#constraints-files>`_. To add ``flask`` version 0.9 in your dependency requirements this way, you can simply write the package with its version into this file.
+<https://pip.pypa.io/en/stable/user_guide/#constraints-files>`_. To add ``numpy`` version 1.13.1 in your dependency requirements this way, you can simply write the package with its version into this file.
 
 To get a stack guidance based on security, run the following command:
 
-..code-block:: console
+.. code-block:: console
 
   thamos advise --recommendation-type security
 
 or modify the ``recommendation_type`` field to ``security`` in ``.thoth.yaml`` to set it as your default recommendation type, and simply run:
 
-..code-block:: console
+.. code-block:: console
 
   thamos advise
 
-Thamos report should show that ``flask`` version 0.9 was automatically removed from your application software stack as a CVE was found in the package.
+Thamos report should show that ``numpy`` 1.13.1 was automatically removed from your application software stack as a CVE was found in the package.
 
 Run the example application
 ===========================
 
+Now that you know how Thamos prevents the use of unsafe direct dependencies in your application, you can revert to another version of ``numpy`` to complete this part of the tutorial.
 To run the example application with the resolved dependencies, run:
 
-..code-block:: console
+.. code-block:: console
 
   python3 game_of_life.py
 
