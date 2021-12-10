@@ -76,7 +76,7 @@ def create_game(grid_size: Optional[Tuple[int, int]] = (20, 20), max_iter: Optio
                 continue
             elif not game_started and event.type == pygame.KEYDOWN:
                 game_started = True
-                print("Starting game of life... 🐍🕹️")
+                print("Starting game of life... 🖥️🕹️🐍")
 
         if game_started:
             new_game.next_generation()
