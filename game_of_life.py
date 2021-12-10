@@ -59,20 +59,28 @@ def create_game(grid_size: Optional[Tuple[int, int]] = (20, 20), max_iter: Optio
     height = new_game.grid_size[1]
     margin = 4
     done = False
-    iterations_left = new_game.max_iter
-
-    while not done and (iterations_left != 0 or (new_game.grid != np.zeros(tuple(new_game.grid_size))).all()):
+    game_started = False
+    print(" 🐍 " * 20)
+    print("✨ Welcome to the Game of Life!\n")
+    print("🎮 Fill squares to initialize the grid and press any keyboard button to start the Game of Life")
+    print("❌ Press ^C in terminal to exit\n")
+    while not done:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 done = True
-            elif event.type == pygame.MOUSEBUTTONDOWN:
+            elif not game_started and event.type == pygame.MOUSEBUTTONDOWN:
                 column = position[0] // (width + margin)
                 row = position[1] // (height + margin)
                 new_game.grid[row][column] = 1
                 new_game.first_individuals_coordinates.append([row, column])
-            elif event.type == pygame.KEYDOWN:
-                new_game.next_generation()
-                iterations_left -= 1
+                continue
+            elif not game_started and event.type == pygame.KEYDOWN:
+                game_started = True
+                print("Starting game of life... 🐍🕹️")
+
+        if game_started:
+            new_game.next_generation()
+            pygame.time.wait(350)
 
         position = pygame.mouse.get_pos()
         x = position[0]
