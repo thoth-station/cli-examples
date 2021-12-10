@@ -95,12 +95,12 @@ Thamos report should show that an error occured during the resolution process be
 Run the example application
 ===========================
 
-Now that you know how Thamos prevents the use of unsafe direct dependencies in your application, you can revert to another version of ``pillow`` to complete this part of the tutorial.
+Now that you know how Thamos prevents the use of unsafe dependencies in your application, you can revert to another version of ``pillow`` to complete this part of the tutorial.
 To run the example application with the resolved dependencies, run:
 
 .. code-block:: console
 
-  python3 game_of_life.py
+  thamos run ./game_of_life.py
 
 To launch a new game with the default parameters or choose your own parameters as specified in the ``help`` section.
-Click on the coordinates to select your first generation of individuals and press ``Enter`` to see the next generation.
+Click on the coordinates to select your first generation of individuals and press ``p`` to see next generations.
