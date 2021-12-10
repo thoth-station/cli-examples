@@ -11,6 +11,7 @@ name = "pypi-org-simple"
 [packages]
 asyncclick = "*"
 click = "*"
+pillow = "*"
 pygame = "*"
 
 [dev-packages]
