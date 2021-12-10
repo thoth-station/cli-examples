@@ -3,7 +3,26 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi-org"
 
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi-org-simple"
+
+[packages]
+asyncclick = "*"
+click = "*"
+pygame = "*"
+
 [dev-packages]
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"
+
+[thoth]
+disable_index_adjustment = false
+
+[packages.numpy]
+index = "pypi-org"
+version = "*"
+
+[thoth.allow_prereleases]
