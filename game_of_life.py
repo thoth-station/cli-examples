@@ -63,7 +63,8 @@ def create_game(grid_size: Optional[Tuple[int, int]] = (20, 20), max_iter: Optio
     print(" 🐍 " * 20)
     print("✨ Welcome to the Game of Life!\n")
     print("🎮 Fill squares to initialize the grid and press any keyboard button to start the Game of Life")
-    print("❌ Press ^C in terminal to exit\n")
+    print("❌ Press ^C in terminal to exit")
+    print("📷 Take a screenshot of the game by pressing any key\n")
     while not done:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -77,6 +78,10 @@ def create_game(grid_size: Optional[Tuple[int, int]] = (20, 20), max_iter: Optio
             elif not game_started and event.type == pygame.KEYDOWN:
                 game_started = True
                 print("Starting game of life... 🖥️🕹️🐍")
+            elif game_started and event.type == pygame.KEYDOWN:
+                screenshot = ImageGrab.grab(all_screens=False)
+                screenshot.show()
+                screenshot.save("my_game.png", "PNG")
 
         if game_started:
             new_game.next_generation()
@@ -99,9 +104,6 @@ def create_game(grid_size: Optional[Tuple[int, int]] = (20, 20), max_iter: Optio
                 )
 
         pygame.display.flip()
-    screenshot = ImageGrab.grab()
-    screenshot.show()
-    screenshot.save("my_game.png", "PNG")
     pygame.quit()
 
 
