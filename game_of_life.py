@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""Example application to demonstrate thamos resolution process"""
+"""Example application to demonstrate thamos resolution process."""
 
 import click
 import numpy as np
@@ -46,7 +46,7 @@ def cli(grid_size, max_iter):
 
 
 def create_game(grid_size: Optional[Tuple[int, int]] = (20, 20), max_iter: Optional[int] = 30):
-
+    """Create a game."""
     pygame.init()
 
     new_game = GameOfLife(grid_size=grid_size, max_iter=max_iter)
@@ -95,7 +95,10 @@ def create_game(grid_size: Optional[Tuple[int, int]] = (20, 20), max_iter: Optio
 
 
 class GameOfLife:
+    """Class for game of life."""
+
     def __init__(self, grid_size=[10, 10], first_individuals_coordinates=[], max_iter=10):
+        """Instance initialization."""
         self.first_individuals_coordinates = first_individuals_coordinates
         self.grid_size = grid_size
         self.grid = np.zeros(tuple(self.grid_size))
@@ -105,7 +108,7 @@ class GameOfLife:
             self.grid[coordinates[0]][coordinates[1]] = 1
 
     def next_generation(self):
-        """Create the next generation of individuals"""
+        """Create the next generation of individuals."""
         neighbors = [(1, 0), (1, -1), (0, -1), (-1, -1), (-1, 0), (-1, 1), (0, 1), (1, 1)]
         rows = len(self.grid)
         columns = len(self.grid[0])
