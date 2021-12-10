@@ -18,7 +18,7 @@
 """Example application to demonstrate thamos resolution process."""
 
 import click
-from pillow import ImageGrab
+from PIL import ImageGrab
 import pygame
 from typing import Tuple
 from typing import Optional
