@@ -1,4 +1,4 @@
-Manage vulnerablities in your dependencies with an example application 
+Manage vulnerablities in your dependencies with an example application
 ----------------------------------------------------------------------
 
 **See different branches for different examples**
@@ -90,7 +90,7 @@ To introduce voluntarily a known vulnerability in the project, specify that you 
 
   thamos add numpy==1.13.1
 
-This version of ``numpy`` is known for introducing a vulnerability further described on the `National Vulnerability Database website 
+This version of ``numpy`` is known for introducing a vulnerability further described on the `National Vulnerability Database website
 <https://nvd.nist.gov/vuln/detail/CVE-2017-12852>`_.
 Thamos can also manage user requirements for dependencies using `constraints files
 <https://pip.pypa.io/en/stable/user_guide/#constraints-files>`_. To add ``numpy`` version 1.13.1 in your dependency requirements this way, you can simply write the package with its version into this file.
