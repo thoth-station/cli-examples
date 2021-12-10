@@ -11,13 +11,13 @@ showing one of the `Integration of Thoth
 For OpenShift s2i (Source-To-Image) examples, visit `thoth-station/s2i-example
 <https://github.com/thoth-station/s2i-example>`__ repository.
 
-Thamos CLI
-==========
+Running the application
+=======================
 
 One of the integration for Thoth is `Thamos
 <https://pypi.org/project/thamos>`_. You can use Thoth's recommendation engine
-directly from within your terminal. First, you need to clone this repo and
-install Thamos CLI:
+directly from within your terminal. First, you need to clone this example repo
+and install Thamos CLI:
 
 .. code-block:: console
 
@@ -32,14 +32,6 @@ The pre-configured template for Thamos CLI is available in the
 
   cat .thoth.yaml
 
-Alternatively, to generate Thoth's configuration file out of the template run the
-following command:
-
-.. code-block:: console
-
-  thamos config --no-interactive --template thoth_conf_template.yaml
-  cat .thoth.yaml  # to browse the content of the config file
-
 Now you are ready to ask for advises:
 
 .. code-block:: console
@@ -47,42 +39,33 @@ Now you are ready to ask for advises:
   thamos advise
 
 This might take some time. Once Thoth recommends you the application stack to
-be used for running the application, create a Python environment and install
-requirements into it:
+be used for running the application, you can use Thamos to create a Python
+environment (based on configuration in ``.thoth.yaml``) and install the
+recommended requirements into it:
 
 .. code-block:: console
 
-  pip3 install micropipenv
+  thamos install
 
-In order to obtain requirement.txt, you can use the following command:
-
-.. code-block:: console
-
-  micropipenv requirements --no-dev
-
-Finally install the requirements in your environment:
+And finally, run the application:
 
 .. code-block:: console
 
-  cat requirements.txt  # check requirements with digests
-  python3 -m venv venv/ && . venv/bin/activate
-  micropipenv install
+  thamos run ./game_of_life.py
 
-And finally, run the application (the virtual environment needs to be still
-activated):
-
-.. code-block:: console
-
-  python3 ./game_of_life.py
-
-To browse Thoth's logs during or after the adviser run:
+To browse Thoth's logs produced during the resolution:
 
 .. code-block:: console
 
   thamos log
 
-The ``game_of_life.py`` program is a simple application that shows how Thamos manages known vulnerablities in the dependencies of a project.
-To use this example application, follow the steps mentioned above relative to the installation of the Thamos CLI and to its configuration using ``.thoth.yaml``.
+About the application
+=====================
+
+The ``game_of_life.py`` program is a simple application that shows how Thamos
+manages known vulnerablities in the dependencies of a project.  To use this
+example application, follow the steps mentioned above relative to the
+installation of the Thamos CLI and to its configuration using ``.thoth.yaml``.
 
 To introduce voluntarily a known vulnerability in the project, specify that you would like to add ``numpy`` version 1.13.1 in your requirements:
 
