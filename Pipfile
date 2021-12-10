@@ -21,8 +21,4 @@ python_version = "3.8"
 [thoth]
 disable_index_adjustment = false
 
-[packages.numpy]
-index = "pypi-org"
-version = "*"
-
 [thoth.allow_prereleases]
