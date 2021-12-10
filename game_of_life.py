@@ -101,7 +101,7 @@ def create_game(grid_size: Optional[Tuple[int, int]] = (20, 20), max_iter: Optio
         pygame.display.flip()
     screenshot = ImageGrab.grab()
     screenshot.show()
-    screenshot.save('my_game.png', 'PNG')
+    screenshot.save("my_game.png", "PNG")
     pygame.quit()
 
 
@@ -112,7 +112,7 @@ class GameOfLife:
         """Instance initialization."""
         self.first_individuals_coordinates = first_individuals_coordinates
         self.grid_size = grid_size
-        self.grid = [[0]*self.grid_size[0] for _ in range(self.grid_size[1])]
+        self.grid = [[0] * self.grid_size[0] for _ in range(self.grid_size[1])]
         self.max_iter = max_iter
 
         for coordinates in self.first_individuals_coordinates:
