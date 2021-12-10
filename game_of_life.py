@@ -62,7 +62,7 @@ def create_game(grid_size: Optional[Tuple[int, int]] = (20, 20), max_iter: Optio
     game_started = False
     print(" 🐍 " * 20)
     print("✨ Welcome to the Game of Life!\n")
-    print("🎮 Fill sqares to initialize the grid and press any keyboard button to start the Game of Life")
+    print("🎮 Fill squares to initialize the grid and press any keyboard button to start the Game of Life")
     print("❌ Press ^C in terminal to exit\n")
     while not done:
         for event in pygame.event.get():
