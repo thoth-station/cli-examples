@@ -90,7 +90,7 @@ or modify the ``recommendation_type`` field to ``security`` in ``.thoth.yaml`` t
 
   thamos advise
 
-Thamos report should show that an error occured during the resolution process because a known vulnerability was found in``pillow`` version 8.0.0 .
+Thamos report should show that an error occured during the resolution process because a known vulnerability was found in ``pillow`` version 8.0.0 .
 
 Run the example application
 ===========================
