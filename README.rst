@@ -21,7 +21,7 @@ and install Thamos CLI:
 
 .. code-block:: console
 
-  git clone https://github.com/thoth-station/cli-example.git && cd cli-example
+  git clone https://github.com/thoth-station/cli-examples.git && cd cli-examples
   pip3 install thamos
   thamos --help
 
