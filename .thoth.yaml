@@ -1,15 +1,55 @@
+# This is  Thoth's configuration file placed in a root of a repo
+# (named as .thoth.yaml) used by Thamos CLI as well as by Thoth bots. Please
+# adjust values listed below as desired.
+
+# A remote Thoth service to talk to:
 host: khemenu.thoth-station.ninja
+
+# Configure TLS verification for communication with remote Thoth instance:
 tls_verify: true
+
+# Format of requirements file, supported are "pip" and "pipenv":
 requirements_format: pipenv
+# A path to overlays directory relative to this configuration file. If null provided, no overlays are used.
+overlays_dir: null
+# Allow or disable managing virtual environment for each overlay.
 virtualenv: true
 
 runtime_environments:
   - name: ubi8
+    # Operating system for which the recommendations should be created:
     operating_system:
       name: ubi
       version: "8"
+    # Labels to be used during the resolution (key-value pairs).
+    labels:
+      example_key: example_value
+    # Hardware information for the recommendation engine:
+    hardware:
+      # Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+      cpu_family: 6
+      cpu_model: 142
+      gpu_model: null
+    # Software configuration of runtime environment:
     python_version: "3.8"
+    cuda_version: null
+    # Recommendation type - one of:
+    #  * testing
+    #  * stable
+    #  * latest
+    #  * performance
+    #  * security
+    # See https://thoth-station.ninja/recommendation-types/
     recommendation_type: latest
+    # Platform used for running the application - corresponds to sysconfig.get_platform() call (e.g. 'linux-x86_64')
+    platform: linux-x86_64
+    # Additional options:
+    openblas_version: null
+    openmpi_version: null
+    cudnn_version: null
+    mkl_version: null
+    # Base container image used to run the application.
+    base_image: null
 
 managers:
   - name: update
