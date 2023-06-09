@@ -16,11 +16,11 @@ overlays_dir: null
 virtualenv: true
 
 runtime_environments:
-  - name: ubi8
+  - name: ubi9
     # Operating system for which the recommendations should be created:
     operating_system:
       name: ubi
-      version: "8"
+      version: "9"
     # Labels to be used during the resolution (key-value pairs).
     labels:
       example_key: example_value
@@ -31,7 +31,7 @@ runtime_environments:
       cpu_model: 142
       gpu_model: null
     # Software configuration of runtime environment:
-    python_version: "3.8"
+    python_version: "3.9"
     cuda_version: null
     # Recommendation type - one of:
     #  * testing
